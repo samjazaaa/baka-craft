@@ -46,6 +46,7 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
   prometheus:
     image: prom/prometheus
+    user: "root"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
       - ./prometheus/prometheus-tsdb:/prometheus
@@ -53,7 +54,7 @@ services:
       - monitor
   grafana:
     image: grafana/grafana-oss:8.2.0
-    user: "1000"
+    user: "root"
     ports:
       - "3000:3000"
     volumes:
@@ -62,4 +63,3 @@ services:
       - ./grafana/dashboards:/etc/grafana/dashboards
     depends_on:
       - prometheus
-
