@@ -53,6 +53,7 @@ services:
       - monitor
   grafana:
     image: grafana/grafana-oss:8.2.0
+    user: "1000"
     ports:
       - "3000:3000"
     volumes:
