@@ -7,7 +7,7 @@ services:
       - 25565:25565
     environment:
       EULA: "TRUE"
-      VERSION: "1.19.2"
+      VERSION: "1.20.2"
       TYPE: "FORGE"
       MOTD: "§dBaka Bois§r §lMC§r Server"
       DIFFICULTY: "normal"
@@ -19,8 +19,9 @@ services:
       OPS_FILE: /extras/ops.json
       OVERRIDE_OPS: "TRUE"
       OVERRIDE_ICON: "TRUE"
-      MEMORY: "2G"
+      MEMORY: "6G"
       TZ: "Europe/Berlin"
+      SPAWN_PROTECTION: "0"
     tty: true
     stdin_open: true
     restart: unless-stopped
